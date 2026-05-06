@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Electron File Explorer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <button id="pick-folder-button" type="button">Select Folder</button>
+      <span id="current-folder" class="muted">No folder selected</span>
+    </header>
+
+    <main class="layout">
+      <section class="panel file-list-panel">
+        <h2>Files</h2>
+        <p id="files-status" class="muted">Select a folder to view files.</p>
+        <table id="files-table" aria-label="files table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Size</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody id="files-table-body"></tbody>
+        </table>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="preview-header">
+          <h2>Text Preview</h2>
+          <button id="load-more-button" type="button" disabled>Load More</button>
+        </div>
+        <p id="preview-status" class="muted">Select a text file to preview.</p>
+        <pre id="preview-content" class="preview-content"></pre>
+      </section>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
