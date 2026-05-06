@@ -1,6 +1,6 @@
-# Electron File Explorer (Take-home)
+# Electron File Explorer
 
-Small Electron application that lets users:
+Application that lets users:
 
 - Select a folder
 - List files (`name`, `size`, `type`)
